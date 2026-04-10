@@ -30,7 +30,7 @@ export default function ArticleDetail() {
   return (
     <div className="min-h-screen">
       {/* HERO */}
-      <div className="relative overflow-hidden bg-gradient-to-b from-[#12102a] to-[#080810] px-6 pt-10 pb-12">
+      <div className="relative overflow-hidden bg-linear-to-b from-[#12102a] to-[#080810] px-6 pt-10 pb-12">
         <div className="absolute inset-0">
           <div
             className={`absolute top-0 left-1/2 -translate-x-1/2 w-96 h-48 bg-gradient-to-br ${article.iconBg} opacity-10 blur-3xl`}
@@ -42,7 +42,12 @@ export default function ArticleDetail() {
             onClick={() => navigate(-1)}
             className="flex items-center gap-2 text-white/40 hover:text-white/70 text-sm mb-6 transition-colors"
           >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -80,7 +85,10 @@ export default function ArticleDetail() {
           <div className="flex items-center gap-4 flex-wrap">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-full bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center text-xs font-bold text-white">
-                {article.author?.split(" ").map(n => n[0]).join("")}
+                {article.author
+                  ?.split(" ")
+                  .map((n) => n[0])
+                  .join("")}
               </div>
 
               <div>
@@ -96,7 +104,12 @@ export default function ArticleDetail() {
             <div className="h-4 w-px bg-white/10" />
 
             <div className="flex items-center gap-1 text-white/40 text-xs">
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg
+                className="w-3.5 h-3.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -158,7 +171,12 @@ export default function ArticleDetail() {
             onClick={() => navigate("/articles")}
             className="flex items-center gap-2 text-white/40 hover:text-white/70 text-sm transition-colors"
           >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"

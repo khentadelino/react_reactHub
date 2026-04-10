@@ -12,7 +12,9 @@ import {
   MoveRight,
 } from "lucide-react";
 
-const featured = articles.filter((article) => article.level === "Advanced");
+const featured = articles
+  .filter((article) => article.level === "Advanced")
+  .slice(0, 2);
 const recent = [...articles]
   .sort((a, b) => new Date(b.date) - new Date(a.date))
   .slice(0, 3);

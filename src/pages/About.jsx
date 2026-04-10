@@ -21,7 +21,7 @@ export default function About() {
         <div className="relative space-y-6">
           {/* TOP ROW: LOGO + TEXT */}
           <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-600 flex items-center justify-center text-xl font-black shadow-lg shadow-violet-500/20 text-white">
+            <div className="w-25 h-25 rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-600 flex items-center justify-center text-2xl font-black shadow-lg shadow-violet-500/20 text-white">
               R
             </div>
 

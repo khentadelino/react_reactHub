@@ -1,8 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import ArticleCard from "../components/Articlecard";
 import CodePreview from "../components/Codepreview";
-import { articles, stats } from "../utils/articleData";
-import { FileText, Users, Tag, Star, Zap, TrendingUp } from "lucide-react";
+import { articles } from "../utils/articleData";
+import {
+  FileText,
+  Users,
+  Tag,
+  Star,
+  Zap,
+  TrendingUp,
+  MoveRight,
+} from "lucide-react";
 
 const featured = articles.filter((article) => article.level === "Advanced");
 const recent = [...articles]
@@ -16,7 +24,7 @@ export default function Home() {
 
   return (
     <div className="p-6 max-w-6xl mx-auto space-y-8">
-      <div className="relative overflow-hidden rounded-2xl bg-linear-to-br from-[#1a1040] via-[#150d35] to-[#0f0a28] border border-white/8 p-8 min-h-50 flex flex-col justify-between">
+      <div className="relative overflow-hidden rounded-2xl bg-linear-to-br from-violet via-violet to-violet border border-white/8 p-8 min-h-50 flex flex-col justify-between">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-20 -right-20 w-72 h-72 bg-violet-600/20 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-1/3 w-40 h-40 bg-purple-600/15 rounded-full blur-2xl" />
@@ -44,19 +52,7 @@ export default function Home() {
               className="flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all hover:shadow-lg hover:shadow-violet-500/25 active:scale-95"
             >
               Explore Articles
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
+              <MoveRight className="w-4 h-4" />
             </button>
             <button
               onClick={() => navigate("/playground")}
@@ -70,9 +66,9 @@ export default function Home() {
 
       <div className="grid grid-cols-3 gap-4">
         {[
-          { value: stats.articles, label: "Articles", icon: <FileText /> },
-          { value: stats.authors, label: "Authors", icon: <Users /> },
-          { value: stats.topics, label: "Topics", icon: <Tag /> },
+          { value: "50+", label: "Articles", icon: <FileText /> },
+          { value: "12", label: "Authors", icon: <Users /> },
+          { value: "8", label: "Topics", icon: <Tag /> },
         ].map((stat) => (
           <div
             key={stat.label}

@@ -81,9 +81,9 @@ const navItems = [
 
 export default function SideFooter() {
   return (
-    <aside className="fixed left-0 top-0 h-full w-14 flex flex-col items-center py-4 border-r border-white/5 bg-blue-900/30 z-40">
+    <aside className="fixed left-0 top-0 h-full w-14 flex flex-col items-center py-4 border-r border-white/5 bg-violet-900/10 z-40">
       {/* Logo */}
-      <div className="w-8 h-8 mb-6 rounded-lg bg-linear-to-br from-blue-400 to-blue-600 flex items-center justify-center shadow-lg shadow-violet-500/30">
+      <div className="w-8 h-8 mb-6 rounded-lg bg-linear-to-br from-violet-400 to-blue-600 flex items-center justify-center shadow-lg shadow-violet-500/30">
         <h1>&gt;_</h1>
       </div>
 
